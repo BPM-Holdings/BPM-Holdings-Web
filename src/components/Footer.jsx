@@ -66,7 +66,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="footer__nav-link footer__nav-link--ext"
                 >
-                  PathWise ↗
+                  PathWise 
                 </a>
               </li>
               <li>
@@ -76,7 +76,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="footer__nav-link footer__nav-link--ext"
                 >
-                  Terra Markets ↗
+                  Terra Markets 
                 </a>
               </li>
             </ul>
@@ -102,7 +102,7 @@ const Footer = () => {
             <div className="footer__founder-link-wrap">
               <span className="label footer__col-subtitle">Founder</span>
               <Link to="/founder" className="footer__founder-link">
-                Boipelo Madiba ↗
+                Boipelo Madiba 
               </Link>
             </div>
           </div>
