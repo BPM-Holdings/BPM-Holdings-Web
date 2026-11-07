@@ -71,8 +71,6 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href={VENTURE_LINKS.terraMarkets}
-                  target="_blank"
                   rel="noopener noreferrer"
                   className="footer__nav-link footer__nav-link--ext"
                 >

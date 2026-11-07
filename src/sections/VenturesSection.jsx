@@ -22,6 +22,7 @@ const ventures = [
     desc: 'Intelligent trading systems and market infrastructure for the modern investor. Terra Markets is building the next generation of financial technology.',
     tags: ['Trading Tech', 'Market Systems', 'FinTech'],
     url: VENTURE_LINKS.terraMarkets,
+    comingSoon: true,
     icon: '◎',
     index: '02',
   },
