@@ -37,7 +37,7 @@ const FounderSection = () => {
             </p>
 
             <a
-              href="https://boipelojunior.com"
+              href="https://personal-portfolio-rho-sable-23.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="founder__link"
