@@ -1,0 +1,198 @@
+/* HeroSection.css — Hero styles */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--black);
+}
+
+/* Globe background */
+.hero__globe-wrap {
+  position: absolute;
+  right: -10%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 70vw;
+  max-width: 700px;
+  pointer-events: none;
+  transition: transform 0.8s var(--ease-luxury);
+  will-change: transform;
+}
+
+.hero__globe-svg {
+  width: 100%;
+  height: auto;
+  animation: rotateSlow 80s linear infinite;
+  transform-origin: center;
+}
+
+/* Noise texture overlay */
+.hero__noise {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* Content */
+.hero__content {
+  position: relative;
+  z-index: 2;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+  width: 100%;
+}
+
+.hero__logo {
+  margin-bottom: 3.5rem;
+}
+
+.bpm-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bpm-logo__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.bpm-logo__name {
+  font-family: var(--font-condensed);
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.bpm-logo__tagline {
+  font-family: var(--font-condensed);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--mid-grey);
+  margin-top: 2px;
+}
+
+/* Text block */
+.hero__text {
+  max-width: 680px;
+}
+
+.hero__headline {
+  color: var(--white);
+  margin: 1rem 0 1.5rem;
+  line-height: 1.02;
+}
+
+.hero__headline em {
+  font-style: italic;
+  color: var(--light-grey);
+}
+
+.hero__sub {
+  font-size: 1rem;
+  color: var(--mid-grey);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 420px;
+}
+
+/* CTA buttons */
+.hero__cta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  background: var(--white);
+  color: var(--black);
+  font-family: var(--font-condensed);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn-primary:hover {
+  background: var(--cream);
+}
+
+.btn-ghost {
+  display: inline-block;
+  padding: 0.85rem 0;
+  background: none;
+  color: var(--light-grey);
+  font-family: var(--font-condensed);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.btn-ghost::after {
+  content: '';
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--light-grey);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease-luxury);
+}
+
+.btn-ghost:hover {
+  color: var(--white);
+}
+
+.btn-ghost:hover::after {
+  transform: scaleX(1);
+}
+
+/* Scroll indicator */
+.hero__scroll {
+  position: absolute;
+  bottom: 3rem;
+  left: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 50px;
+  background: linear-gradient(to bottom, transparent, var(--mid-grey));
+  animation: fadeIn 2s 1.5s forwards;
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .hero__globe-wrap {
+    width: 90vw;
+    right: -30%;
+    opacity: 0.4;
+  }
+  .hero__sub br { display: none; }
+  .hero__scroll { display: none; }
+}

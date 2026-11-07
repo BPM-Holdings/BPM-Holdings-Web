@@ -1,0 +1,93 @@
+/* LegalPage.css — Shared styles for legal/policy pages */
+
+.legal-page {
+  background: var(--black);
+  min-height: 100vh;
+}
+
+.legal-page__header {
+  margin-bottom: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.legal-page__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 300;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.legal-page__meta {
+  font-family: var(--font-condensed);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--chrome-mid);
+}
+
+.legal-page__body {
+  max-width: 760px;
+}
+
+.legal-section {
+  margin-bottom: 3rem;
+}
+
+.legal-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: 300;
+  color: var(--chrome-light);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--chrome-border);
+}
+
+.legal-section p {
+  font-size: 0.92rem;
+  color: var(--mid-grey);
+  line-height: 1.8;
+  margin-bottom: 0.8rem;
+}
+
+.legal-section ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.legal-section ul li {
+  font-size: 0.92rem;
+  color: var(--mid-grey);
+  line-height: 1.7;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.legal-section ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--chrome-dark);
+}
+
+.legal-section a {
+  color: var(--chrome-mid);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.3s;
+}
+
+.legal-section a:hover {
+  color: var(--chrome-shine);
+}
+
+.legal-section strong {
+  color: var(--light-grey);
+  font-weight: 500;
+}

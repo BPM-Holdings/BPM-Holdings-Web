@@ -1,0 +1,104 @@
+/* PartnersSection.css */
+
+.partners {
+  background: var(--black);
+  border-top: 1px solid var(--border-light);
+  overflow: hidden;
+}
+
+.partners__header {
+  margin-bottom: 3.5rem;
+}
+
+.partners__sub {
+  max-width: 400px;
+  font-size: 0.9rem;
+  color: var(--mid-grey);
+  line-height: 1.7;
+}
+
+/* Track wrapper — clips the scrolling content */
+.partners__track-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+  /* Fade edges */
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+.partners__track-wrap--reverse {
+  margin-bottom: 0;
+}
+
+/* Scrolling track */
+.partners__track {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+  padding: 0.5rem 0;
+}
+
+.partners__track--reverse {
+  animation: marquee 40s linear infinite reverse;
+}
+
+/* Pause on hover */
+.partners__track-wrap:hover .partners__track {
+  animation-play-state: paused;
+}
+
+/* Individual chip */
+.partner-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.4rem;
+  border: 1px solid var(--border-light);
+  white-space: nowrap;
+  transition: border-color 0.3s, background 0.3s;
+  cursor: default;
+}
+
+.partner-chip:hover {
+  border-color: var(--mid-grey);
+  background: #141412;
+}
+
+.partner-chip--dim {
+  opacity: 0.4;
+}
+
+.partner-chip__dot {
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--dark-grey);
+  transition: background 0.3s;
+}
+
+.partner-chip:hover .partner-chip__dot {
+  background: var(--mid-grey);
+}
+
+.partner-chip__name {
+  font-family: var(--font-condensed);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--light-grey);
+}
+
+.partner-chip__role {
+  font-family: var(--font-condensed);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dark-grey);
+  padding-left: 0.4rem;
+  border-left: 1px solid var(--border-light);
+}

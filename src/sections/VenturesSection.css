@@ -1,0 +1,194 @@
+/* VenturesSection.css */
+
+.ventures {
+  background: var(--black);
+  border-top: 1px solid var(--border-light);
+}
+
+.ventures__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 4rem;
+  gap: 3rem;
+}
+
+.ventures__headline {
+  color: var(--white);
+}
+
+.ventures__headline em {
+  font-style: italic;
+  color: var(--mid-grey);
+}
+
+.ventures__intro {
+  max-width: 340px;
+  font-size: 0.9rem;
+  color: var(--mid-grey);
+  line-height: 1.8;
+}
+
+/* Grid */
+.ventures__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border-light);
+}
+
+/* Card */
+.venture-card {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  background: var(--black);
+  cursor: pointer;
+  transition: background 0.4s var(--ease-luxury), opacity 0.4s;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.venture-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #141412;
+  opacity: 0;
+  transition: opacity 0.4s var(--ease-luxury);
+}
+
+.venture-card--hovered::before {
+  opacity: 1;
+}
+
+.venture-card--dimmed {
+  opacity: 0.5;
+}
+
+.venture-card__index {
+  font-family: var(--font-condensed);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--dark-grey);
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.venture-card__icon {
+  font-size: 2rem;
+  color: var(--chrome-mid);
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s;
+}
+
+.venture-card--hovered .venture-card__icon {
+  color: var(--chrome-shine);
+}
+
+.venture-card__body {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.venture-card__name {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 300;
+  color: var(--white);
+  margin-bottom: 0.3rem;
+}
+
+.venture-card__tagline {
+  font-family: var(--font-condensed);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mid-grey);
+  margin-bottom: 1.5rem;
+}
+
+.venture-card__desc {
+  font-size: 0.9rem;
+  color: var(--mid-grey);
+  line-height: 1.7;
+  margin-bottom: 1.8rem;
+  max-width: 380px;
+}
+
+.venture-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.venture-card__tag {
+  font-family: var(--font-condensed);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--chrome-dark);
+  border: 1px solid var(--chrome-border);
+  padding: 0.25rem 0.6rem;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.venture-card--hovered .venture-card__tag {
+  color: var(--chrome-mid);
+  border-color: var(--chrome-mid);
+}
+
+/* Footer */
+.venture-card__footer {
+  position: relative;
+  z-index: 1;
+}
+
+.venture-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-condensed);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--mid-grey);
+  transition: color 0.3s;
+}
+
+.venture-card--hovered .venture-card__cta {
+  color: var(--chrome-shine);
+}
+
+.venture-card__line {
+  height: 1px;
+  background: var(--chrome-border);
+  margin-top: 1rem;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s var(--ease-luxury);
+}
+
+.venture-card--hovered .venture-card__line {
+  transform: scaleX(1);
+}
+
+@media (max-width: 768px) {
+  .ventures__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ventures__grid {
+    grid-template-columns: 1fr;
+  }
+  .venture-card {
+    padding: 2.5rem 1.5rem;
+  }
+}
