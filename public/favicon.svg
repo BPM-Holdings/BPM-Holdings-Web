@@ -1,3 +1,7 @@
+export const metadata = {
+  icons: { icon: [{ url: "/favicon.svg", type: "image/svg+xml" }] },
+};
+
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <circle cx="16" cy="16" r="14" fill="none" stroke="#000" stroke-width="1.5"/>
   <ellipse cx="16" cy="16" rx="6" ry="14" fill="none" stroke="#000" stroke-width="1"/>
